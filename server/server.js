@@ -27,6 +27,8 @@ io.on('connection', (socket) => {
   // Listen for chat messages
   socket.on('chat message', (msg) => {
     io.emit('chat message', msg); // Broadcast the message to all connected clients
+    console.log(msg)
+    console.log(socket.id)
   });
 
   // Disconnect event
